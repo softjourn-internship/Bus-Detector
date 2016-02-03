@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Маршруки Франківська</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link type="text/css" rel="Stylesheet" href="css/styles.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapProp = {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<header class="header">
+    <div id="headerInner">
+        <nav class="topMenuRight">
+            <ul>
+                <nav class="bottomMenu">
+                    <ul class="dropdown">
+                        <li class="dropdown-top">
+                            <a class="dropdown-top" href="/">Номер Маршруту</a>
+                            <ul class="dropdown-inside">
+                                <li><a href="/">21 Вокзал-Онкодиспансер</a></li>
+                                <li><a href="/">23 Гранта Хокевича-Автостанція №3</a></li>
+                                <li><a href="/">24 Хриплин-вул.Максимовича</a></li>
+                                <li><a href="/">25 Тролейбусне депо-вул.Дудаєва</a></li>
+                                <li><a href="/">26 Вокзал-Автостанція №3</a></li>
+                                <li><a href="/">29 Обласна лікарня-Автостанція №3</a></li>
+                                <li><a href="/">30 вул. Гранта Хоткевича-Автостанція №3</a></li>
+                                <li><a href="/">31 с.Никитенці-вул.Кармелюка</a></li>
+                                <li><a href="/">вул.Симоненка-Обласна лікарня</a></li>
+                                <li><a href="/">м/н Каскад-Автостанція№3</a></li>
+                                <li><a href="/">с.Вовчанець-вул.Тичини</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+            </ul>
+</header>
+<body>
+<h1>Зупинки</h1>
+<div class="route1">
+    <ul>
+        <li class="li">Прямі</li>
+        <li>Житловий масив</li>
+        <li>Онкодиспансер</li>
+        <li>Психоневрологічний диспансер</li>
+        <li>СТО</li>
+        <li>АЗС</li>
+        <li>Опришівці-центр</li>
+        <li>м/н Опришівці</li>
+        <li>Аеропорт</li>
+        <li>вул. Рильського</li>
+        <li>вул. Ботанічна</li>
+        <li>Водоекотехпром</li>
+        <li>Хлібокомбінат</li>
+        <li>УТОС</li>
+        <li>Школа-інтернат</li>
+        <li>стадіон "Рух"</li>
+        <li>Парк Шевченка</li>
+        <li>Прикарпатський національний університет ім. В. Стефаника</li>
+        <li>Головпоштамт</li>
+        <li>Бастіон</li>
+        <li>ЦУМ</li>
+        <li>вул. Дністровська</li>
+        <li>Залізничний вокзал</li>
+    </ul>
+</div>
+<div class="route2">
+    <ul>
+        <li class="li">Зворотні</li>
+        <li>Залізничний вокзал</li>
+        <li>готель "Надія"</li>
+        <li>вул. Коновальця</li>
+        <li>Військова кафедра</li>
+        <li>вул. Національної гвардії</li>
+        <li>Обласна дитяча лікарня</li>
+        <li>вул. Сорохтея</li>
+        <li>Водоекотехпром</li>
+        <li>вул. Ботанічна</li>
+        <li>вул. Рильського</li>
+        <li>Аеропорт</li>
+        <li>м/н Опришівці</li>
+        <li>Опришівці-центр</li>
+        <li>АЗС</li>
+        <li>СТО</li>
+        <li>Психоневрологічний диспансер</li>
+        <li>Житловий масив</li>
+    </ul>
+</div>
+<div id="googleMap" style="width:auto;height:500px;"></div>
+</body>
