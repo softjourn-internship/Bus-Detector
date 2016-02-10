@@ -22,106 +22,46 @@
         <span class="icon-bar"></span>
       </a>
     </div>
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <ul class="nav navbar-nav navbar-left">
-                <li class="dropdown">
-                    <a id="div"  href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Маршрутка
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">21 ЗАЛІЗНИЧНИЙ ВОКЗАЛ - ОНКОДИСПАНСЕР</a></li>
-                        <li><a href="#">23 ВУЛ. ГНАТА ХОТКЕВИЧА - АВТОСТАНЦІЯ №3</a></li>
-                        <li><a href="#">24 СЕЛИЩЕ ХРИПЛИН - ВУЛ. МАКСИМОВИЧА</a></li>
-                        <li><a href="#">25 ТРОЛЕЙБУСНЕ ДЕПО - ВУЛ. ДУДАЄВА</a></li>
-                        <li><a href="#">26 ЗАЛІЗНИЧНИЙ ВОКЗАЛ - АВТОСТАНЦІЯ №3</a></li>
-                        <li><a href="#">26A КІЛЬЦЕВИЙ: АВТОСТАНЦІЯ №3 (ЧЕРЕЗ ЦУМ)</a></li>
-                        <li><a href="#">29 ОБЛАСНА ЛІКАРНЯ - АВТОСТАНЦІЯ №3</a></li>
-                    </ul>
-                </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="dropdown">
-                        <a  id="div"  href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Автобус
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">22 АВТОСТАНЦІЯ №2 - ВУЛ. ГНАТА ХОТКЕВИЧА</a></li>
-                            <li><a href="#">27 М/Н КАСКАД - ВУЛ. ПУЛЮЯ</a></li>
-                            <li><a href="#">28 М/Н КАСКАД - АВТОСТАНЦІЯ №3</a></li>
-                            <li><a href="#">38 ОБЛАСНА ЛІКАРНЯ - С. ДРАГОМИРЧАНИ</a></li>
-                            <li><a href="#">40 М/Н КАСКАД - АВТОСТАНЦІЯ №3</a></li>
-                        </ul>
-                    </li>
-                    </ul>
-            <ul class="nav navbar-nav navbar-left">
-                <li class="dropdown">
-                    <a id="div" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Тролейбус
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">1 РАДІОЗАВОД - ЗАЛІЗНИЧНИЙ ВОКЗАЛ</a></li>
-                        <li><a href="#">2 ЗАЛІЗНИЧНИЙ ВОКЗАЛ - ВУЛ. ЮНОСТІ</a></li>
-                        <li><a href="#">3 ПАТ "РОДОН" - ЗАЛІЗНИЧНИЙ ВОКЗАЛ</a></li>
-                        <li><a href="#">4 ФІРМА "БАРВА" - ВУЛ. ДНІСТРОВСЬКА</a></li>
-                        <li><a href="#">6 ПЛ. ЄВРОПЕЙСЬКА - АВТОСТАНЦІЯ №2</a></li>
-                        <li><a href="#">7 М/Н КАСКАД - ВУЛ. АКАДЕМІКА САХАРОВА</a></li>
-                        <li><a href="#">9 М/Н КАСКАД - ВУЛ. АКАДЕМІКА САХАРОВА</a></li>
-                        <li><a href="#">10 ПАТ "РОДОН" - АВТОСТАНЦІЯ №4</a></li>
-                    </ul>
-                </li>
-        <li>&nbsp;</li>
-      </ul>
-
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav nav-pills navbar-nav">
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle" id="posh">Пошук<b class="caret"></b></a>
+                <ul class="dropdown-menu" id="menu1">
+                    <form class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label" for="input">Від</label>
+                            <div class="controls">
+                                <input type="text" id="input" placeholder="Від">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input">До</label>
+                            <div class="controls">
+                                <input type="text" id="input" placeholder="До">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="input">Номер Маршруту</label>
+                            <div class="controls">
+                                <input type="text" id="input" placeholder="Номер маршруту">
+                            </div>
+                            <button type="submit" class="btn">Пошук</button>
+                        </div>
     </div>
-</div>
-
-<div id="map-canvas"></div>
-<div class="container-fluid" id="main">
-  <div class="row">
-  	<div class="col-xs-8" id="left">
-      <h2 class="text-center">Зупинки</h2>
-      <div class="panel panel-default">
-          <div class="ul1">
-          <ul>
-              <li>Житловий масив</li>
-              <li>Онкодиспансер</li>
-              <li>Психоневрологічний диспансер</li>
-              <li>СТО</li>
-              <li>АЗС</li>
-              <li>Опришівці-центр</li>
-              <li>м/н Опришівці</li>
-              <li>Аеропорт</li>
-              <li>вул. Рильського</li>
-              <li>вул. Ботанічна</li>
-              <li>Водоекотехпром</li>
-              <li>Хлібокомбінат</li>
-              <li>УТОС</li>
-              <li>Школа-інтернат</li>
-              <li>стадіон "Рух"</li>
-              <li>Парк Шевченка</li>
-              <li>Прикарпатський національний університет ім. В. Стефаника</li>
-              <li>Головпоштамт</li>
-              <li>Бастіон</li>
-              <li>ЦУМ</li>
-              <li>вул. Дністровська</li>
-              <li>Залізничний вокзал</li>
-          </ul>
-          </div>
-    </div>
+    </form>
+    </ul>
+    </li>
+    </ul>
     <div class="col-xs-4"><!--map-canvas will be postioned here--></div>
-    
-  </div>
+</div><!-- /.navbar-collapse -->
 </div>
-<!-- end template -->
+</nav>
 
-	<!-- script references -->
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
-		<script src="js/scripts.js"></script>
-	</body>
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="100%" src="https://maps.google.com/maps?hl=en&q=ivano-frankivsk&ie=UTF8&t=m&z=10&iwloc=B&output=embed"></iframe>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+<script src="js/scripts.js"></script>
+    </body>
 </html>
