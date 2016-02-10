@@ -56,7 +56,7 @@ body{
 }
 
 #map-canvas {
-	width:65%;
+	width:100%;
     height:calc(100% - 0);
     position:absolute;
     right:16px;
@@ -73,13 +73,17 @@ body{
 	font-size: 16px;
 	color: white;
 }
-@media only screen and (max-width: 780px) {
-	#main  {
-		display: none;
-	}
+.controls {
+	color: black;
 }
-@media only screen and (max-width: 780px) {
-	#map-canvas  {
-		width: 100%;
-	}
+.control-label {
+	color: black;
 }
+.btn:focus, #posh:focus {
+	background-color: #49bfff;
+}
+.btn, #posh{
+	background-color: #168ccc;
+}
+
+
