@@ -1,8 +1,8 @@
-package com.bus.detector.data.service.impl;
+package com.bus.detector.route.service.impl;
 
-import com.bus.detector.data.Entities.TimeTable;
-import com.bus.detector.data.repository.TimeTableRepo;
-import com.bus.detector.data.service.TimeTableImpl;
+import com.bus.detector.route.domain.TimeTable;
+import com.bus.detector.route.repository.TimeTableRepo;
+import com.bus.detector.route.service.TimeTableLogic;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.List;
  */
 
 @Service
-public class TimeTableService implements TimeTableImpl {
+public class TimeTableService implements TimeTableLogic {
     private final static Logger LOGGER = org.slf4j.LoggerFactory.getLogger(TimeTableService.class);
     @Autowired
     private TimeTableRepo timeTableRepo;

@@ -1,6 +1,6 @@
-package com.bus.detector.data.service;
+package com.bus.detector.route.service;
 
-import com.bus.detector.data.Entities.TimeTable;
+import com.bus.detector.route.domain.TimeTable;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import java.util.List;
  * by Mr Skip on 09.02.2016.
  */
 
-public interface TimeTableImpl {
+public interface TimeTableLogic {
     List<TimeTable> getAll();
     List<TimeTable> getByBusNumber(String busNumber);
     TimeTable getByBusNumber(String BusNumber, String day);

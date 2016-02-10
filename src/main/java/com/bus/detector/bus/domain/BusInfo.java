@@ -1,11 +1,17 @@
-package com.bus.detector.data.Entities;
+package com.bus.detector.bus.domain;
 
-import javax.persistence.*;
+import com.bus.detector.route.domain.Route;
+import com.bus.detector.route.domain.TimeTable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- * by Mr Skip on 08.02.2016.
+ * by Mr Skip on 10.02.2016.
  */
 
 @Entity
@@ -36,60 +42,60 @@ public class BusInfo {
     }
 
     public int getId() {
-        return id;
-    }
+            return id;
+        }
 
     public void setId(int id) {
-        this.id = id;
-    }
+            this.id = id;
+        }
 
     public String getBusNumber() {
-        return busNumber;
-    }
+            return busNumber;
+        }
 
     public void setBusNumber(String busNumber) {
-        this.busNumber = busNumber;
-    }
+            this.busNumber = busNumber;
+        }
 
     public String getDriverName() {
-        return driverName;
-    }
+            return driverName;
+        }
 
     public void setDriverName(String driverName) {
-        this.driverName = driverName;
-    }
+            this.driverName = driverName;
+        }
 
     public String getPhoneNumber() {
-        return phoneNumber;
-    }
+            return phoneNumber;
+        }
 
     public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+            this.phoneNumber = phoneNumber;
+        }
 
     public String getMachine() {
-        return machine;
-    }
+            return machine;
+        }
 
     public void setMachine(String machine) {
-        this.machine = machine;
-    }
+            this.machine = machine;
+        }
 
     public Set<TimeTable> getTimeTables() {
-        return timeTables;
-    }
+            return timeTables;
+        }
 
     public void setTimeTables(Set<TimeTable> timeTables) {
-        this.timeTables = timeTables;
-    }
+            this.timeTables = timeTables;
+        }
 
     public Set<Route> getRoutes() {
-        return routes;
-    }
+            return routes;
+        }
 
     public void setRoutes(Set<Route> routes) {
-        this.routes = routes;
-    }
+            this.routes = routes;
+        }
 
     @Override
     public String toString() {
