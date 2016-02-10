@@ -1,4 +1,4 @@
-package com.bus.detector.data.Entities;
+package com.bus.detector.route.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

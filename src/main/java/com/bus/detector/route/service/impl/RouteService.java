@@ -1,9 +1,9 @@
-package com.bus.detector.data.service.impl;
+package com.bus.detector.route.service.impl;
 
-import com.bus.detector.data.Entities.BusInfo;
-import com.bus.detector.data.Entities.Route;
-import com.bus.detector.data.repository.RouteRepo;
-import com.bus.detector.data.service.RouteImpl;
+import com.bus.detector.bus.domain.BusInfo;
+import com.bus.detector.route.domain.Route;
+import com.bus.detector.route.repository.RouteRepo;
+import com.bus.detector.route.service.RouteLogic;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 @Service
-public class RouteService implements RouteImpl {
+public class RouteService implements RouteLogic {
     private final static Logger LOGGER = org.slf4j.LoggerFactory.getLogger(RouteService.class);
 
     @Autowired

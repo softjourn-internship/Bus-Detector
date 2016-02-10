@@ -1,7 +1,7 @@
-package com.bus.detector.data.repository;
+package com.bus.detector.bus.repository;
 
-import com.bus.detector.data.Entities.BusInfo;
-import com.bus.detector.data.Entities.Route;
+import com.bus.detector.bus.domain.BusInfo;
+import com.bus.detector.route.domain.Route;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -29,6 +29,4 @@ public interface BusInfoRepo extends JpaRepository<BusInfo, Integer>{
             "and b.machine = :machine")
     List<Route> getRouteByBusNumber(@Param("busNumber") String busNumber,
                                     @Param("machine") String machine);
-
-
 }

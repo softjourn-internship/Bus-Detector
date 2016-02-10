@@ -1,6 +1,6 @@
-package com.bus.detector.data.repository;
+package com.bus.detector.route.repository;
 
-import com.bus.detector.data.Entities.TimeTable;
+import com.bus.detector.route.domain.TimeTable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

@@ -1,4 +1,6 @@
-package com.bus.detector.data.Entities;
+package com.bus.detector.route.domain;
+
+import com.bus.detector.bus.domain.BusInfo;
 
 import javax.persistence.*;
 import java.util.HashSet;

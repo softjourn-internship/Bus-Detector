@@ -1,6 +1,6 @@
-package com.bus.detector.data.repository;
+package com.bus.detector.route.repository;
 
-import com.bus.detector.data.Entities.StopStations;
+import com.bus.detector.route.domain.StopStations;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

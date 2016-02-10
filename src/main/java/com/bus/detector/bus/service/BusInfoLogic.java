@@ -1,14 +1,14 @@
-package com.bus.detector.data.service;
+package com.bus.detector.bus.service;
 
-import com.bus.detector.data.Entities.BusInfo;
-import com.bus.detector.data.Entities.Route;
+import com.bus.detector.bus.domain.BusInfo;
+import com.bus.detector.route.domain.Route;
 
 import java.util.List;
 
 /**
  * by Mr Skip on 09.02.2016.
  */
-public interface BusInfoImpl {
+public interface BusInfoLogic {
     List<BusInfo> getAll();
     BusInfo getByDriverName(String name);
     BusInfo getByDriverPhone(String phone);
