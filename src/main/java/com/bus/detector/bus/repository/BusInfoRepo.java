@@ -1,7 +1,6 @@
 package com.bus.detector.bus.repository;
 
 import com.bus.detector.bus.domain.BusInfo;
-import com.bus.detector.route.domain.Route;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -13,20 +12,16 @@ import java.util.List;
  */
 
 public interface BusInfoRepo extends JpaRepository<BusInfo, Integer>{
-    @Query("select busNumber, driverName, phoneNumber, machine from BusInfo where driverName = :name")
+    @Query("select b from BusInfo b where driverName = :name")
     BusInfo getBusByDriverName(@Param("name") String name);
 
-    @Query("select busNumber, driverName, phoneNumber, machine from BusInfo where phoneNumber = :phoneNumber")
+    @Query("select b from BusInfo b where phoneNumber = :phoneNumber")
     BusInfo getBusByDriverPhone(@Param("phoneNumber") String phoneNumber);
 
-    @Query("select b.busNumber, b.driverName, b.phoneNumber, b.machine from BusInfo b, Route r " +
-            "where b.id = r.busInfo and r.streetName = :streetName")
-    List<BusInfo> getBusInfoByStreetName(@Param("streetName") String streetName);
+    @Query("select b.busNumber from BusInfo b")
+    List<String> getAllBusNumber();
 
-    @Query("select r.streetName, r.startCoordinate, r.endCoordinate from BusInfo b, Route r " +
-            "where b.id = r.busInfo " +
-            "and b.busNumber = :busNumber " +
-            "and b.machine = :machine")
-    List<Route> getRouteByBusNumber(@Param("busNumber") String busNumber,
-                                    @Param("machine") String machine);
+    @Query("select b from BusInfo b " +
+            "where b.busNumber = :busNumber ")
+    List<BusInfo> getBusByBusNumber(@Param("busNumber") String busNumber);
 }
