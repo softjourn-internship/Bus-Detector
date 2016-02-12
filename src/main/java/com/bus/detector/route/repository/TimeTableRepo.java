@@ -12,11 +12,11 @@ import java.util.List;
  */
 
 public interface TimeTableRepo extends JpaRepository<TimeTable, Integer> {
-    @Query("select t.day, t.beginWork, t.endWork from TimeTable t, BusInfo b " +
+    @Query("select t from TimeTable t, BusInfo b " +
             "where b.id = t.busInfo and b.busNumber = :busNumber")
     List<TimeTable> getTimeTableByBusNumber(@Param("busNumber") String busNumber);
 
-    @Query("select t.day, t.beginWork, t.endWork from TimeTable t, BusInfo b " +
+    @Query("select t from TimeTable t, BusInfo b " +
             "where b.id = t.busInfo and b.busNumber = :busNumber and t.day = :day")
     TimeTable getTimeTableByBusNumber(@Param("busNumber") String busNumber,
                                       @Param("day") String day);
