@@ -1,13 +1,15 @@
 package com.bus.detector.bus.service.impl;
 
 import com.bus.detector.bus.domain.BusInfo;
-import com.bus.detector.route.domain.Route;
 import com.bus.detector.bus.repository.BusInfoRepo;
 import com.bus.detector.bus.service.BusInfoLogic;
+import com.bus.detector.route.repository.PointRepo;
+import com.bus.detector.route.repository.StopStationsRepo;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,6 +22,12 @@ public class BusInfoService implements BusInfoLogic {
 
     @Autowired
     private BusInfoRepo busInfoRepo;
+
+    @Autowired
+    private StopStationsRepo stopStationsRepo;
+
+    @Autowired
+    private PointRepo pointRepo;
 
     @Override
     public BusInfo getByDriverName(String name) {
@@ -51,22 +59,21 @@ public class BusInfoService implements BusInfoLogic {
     }
 
     @Override
-    public List<BusInfo> getBusInfoByStreetName(String streetName) {
+    public List<BusInfo> getBusByBusNumber(String busNumber) {
         List<BusInfo> list;
-        if ((list = busInfoRepo.getBusInfoByStreetName(streetName)).isEmpty()){
-            LOGGER.warn("Cant find any Bus in class: " + getClass().getName()
-            + ". In method: getBusInfoByStreetName(String streetName)");
+        if ((list = busInfoRepo.getBusByBusNumber(busNumber)).isEmpty()){
+            LOGGER.warn("Cant find any Route in class: " + getClass().getName()
+                    + ". In method: getRouteByBusNumber(String busNumber)");
         }
+        System.out.println(list.get(0).getPoints().size() + " - SIZE");
+        System.out.println("info- " + pointRepo.findAll().get(0).getBusInfo().toString());
+        System.out.println(pointRepo.findAll().size() + " - SIZE");
+        System.out.println("Close");
         return list;
     }
 
     @Override
-    public List<Route> getRouteByBusNumber(String busNumber, String machine) {
-        List<Route> list;
-        if ((list = busInfoRepo.getRouteByBusNumber(busNumber, machine)).isEmpty()){
-            LOGGER.warn("Cant find any Route in class: " + getClass().getName()
-                    + ". In method: getRouteByBusNumber(String busNumber)");
-        }
-        return list;
+    public List<String> getAllBusNumber() {
+        return busInfoRepo.getAllBusNumber();
     }
 }
