@@ -20,13 +20,15 @@ public class Point {
     @JsonIgnore
     private BusInfo busInfo;
 
-    private String coordinate;
+    private double coordinateX;
+    private double coordinateY;
 
     public Point(){}
 
-    public Point(int id, String coordinate){
+    public Point(int id, double coordinateX, double coordinateY){
         this.id = id;
-        this.coordinate = coordinate;
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
     }
 
     public int getId() {
@@ -45,19 +47,19 @@ public class Point {
         this.busInfo = busInfo;
     }
 
-    public String getCoordinate() {
-        return coordinate;
+    public double getCoordinateX() {
+        return coordinateX;
     }
 
-    public void setCoordinate(String coordinate) {
-        this.coordinate = coordinate;
+    public void setCoordinateX(double coordinataX) {
+        this.coordinateX = coordinataX;
     }
 
-    @Override
-    public String toString() {
-        return "Point{" +
-                "id=" + id +
-                ", coordinate='" + coordinate + '\'' +
-                '}';
+    public double getCoordinataY() {
+        return coordinateY;
+    }
+
+    public void setCoordinateY(double coordinataY) {
+        this.coordinateY = coordinataY;
     }
 }
