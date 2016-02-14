@@ -14,8 +14,10 @@ import java.util.List;
 public class StopStations {
     @Id
     private int id;
-    private String coordinate;
+
     private String name;
+    private double coordinateX;
+    private double coordinateY;
 
     @ManyToMany
     @JoinTable(
@@ -28,10 +30,11 @@ public class StopStations {
 
     public StopStations(){}
 
-    public StopStations(int id, String name, String coordinate){
+    public StopStations(int id, String name, double coordinateX, double coordinateY){
         this.id = id;
-        this.coordinate = coordinate;
         this.name = name;
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
     }
 
     public int getId() {
@@ -46,14 +49,6 @@ public class StopStations {
         return name;
     }
 
-    public String getCoordinate() {
-        return coordinate;
-    }
-
-    public void setCoordinate(String coordinate) {
-        this.coordinate = coordinate;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -66,12 +61,29 @@ public class StopStations {
         this.busInfoList = busInfoList;
     }
 
+    public double getCoordinateX() {
+        return coordinateX;
+    }
+
+    public void setCoordinateX(double coordinateX) {
+        this.coordinateX = coordinateX;
+    }
+
+    public double getCoordinateY() {
+        return coordinateY;
+    }
+
+    public void setCoordinateY(double coordinateY) {
+        this.coordinateY = coordinateY;
+    }
+
     @Override
     public String toString() {
         return "StopStations{" +
                 "id=" + id +
-                ", coordinate='" + coordinate + '\'' +
                 ", name='" + name + '\'' +
+                ", coordinateX=" + coordinateX +
+                ", coordinateY=" + coordinateY +
                 '}';
     }
 }

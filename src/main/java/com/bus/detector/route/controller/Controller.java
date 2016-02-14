@@ -9,4 +9,5 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/bus-detector")
 @RestController
 public class Controller {
+
 }
