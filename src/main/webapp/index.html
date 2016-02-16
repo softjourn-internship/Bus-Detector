@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+        
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>Маршрутки</title>
@@ -11,6 +12,7 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+        
 	</head>
 	<body>
 <!-- begin template -->
@@ -122,8 +124,22 @@
 </div>
 </nav>
 
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="100%" src="https://maps.google.com/maps?hl=en&q=ivano-frankivsk&ie=UTF8&t=m&z=10&iwloc=B&output=embed"></iframe>
+<div id="floating-panel">
+    <b>Mode of Travel: </b>
+    <select id="mode">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+    </div>
+<div id="map"></div>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG_IW5TRLmSJXkYTcF9dn5DC05Dgyy1qw&signed_in=true&callback=initMap"
+        async defer></script>
+
+
+
+<script src="js/coord.js"></script>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
