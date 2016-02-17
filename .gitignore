@@ -4,4 +4,4 @@ mvnw
 mvnw.cmd
 /target
 *.iml
-src/main/webapp/bower_components
+src/main/webapp/bower_components/
