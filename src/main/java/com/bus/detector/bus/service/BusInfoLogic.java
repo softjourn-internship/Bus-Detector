@@ -12,6 +12,5 @@ public interface BusInfoLogic {
     List<BusInfo> getAll();
     BusInfo getByDriverName(String name);
     BusInfo getByDriverPhone(String phone);
-    List<BusInfo> getBusByBusNumber(String busNumber);
     Map<Integer, String> getAllBusNumber();
 }
