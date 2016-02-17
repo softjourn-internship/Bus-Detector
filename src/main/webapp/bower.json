@@ -1,0 +1,22 @@
+{
+  "name": "bus-detector",
+  "homepage": "https://github.com/softjourn-internship/bus-detector",
+  "authors": [
+    "Bohdan Yaskovets <monolitxl27@gmail.com>"
+  ],
+  "description": "This project will show current location of buses in Ivano-Frankivsk on the map",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "2.2.0",
+    "normalize-css": "normalize.css#^3.0.3"
+  }
+}
