@@ -40,6 +40,14 @@ public class BusInfo {
 
     public BusInfo(){}
 
+    public BusInfo (BusInfo newBus){
+        setId(newBus.getId());
+        setPoints(newBus.getPoints());
+        setBusNumber(newBus.getBusNumber());
+        setDriverName(newBus.getDriverName());
+        setPhoneNumber(newBus.getPhoneNumber());
+    }
+
     public BusInfo(String busNumber, String driverName,
                    String phoneNumber, String machine){
         this.busNumber = busNumber;
